@@ -6,3 +6,4 @@ mod pattern_matching;
 mod unsafe_rust;
 mod declarative_macros;
 mod concurrency;
+mod capstones;
