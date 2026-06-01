@@ -1,47 +1,36 @@
-
-pub fn double_all (nums : &[i32]) -> Vec<i32>{
-
-
-    let double = nums.iter().map(|&x|x*2).collect();
+pub fn double_all(nums: &[i32]) -> Vec<i32> {
+    let double = nums.iter().map(|&x| x * 2).collect();
 
     return double;
-
 }
 
-pub fn sum_of_squares (nums : &[i32]) -> i32 {
-
+pub fn sum_of_squares(nums: &[i32]) -> i32 {
     let mut sum = 0;
 
-    let square : Vec<i32> = nums.iter().map(|&x|x * x).collect();
+    let square: Vec<i32> = nums.iter().map(|&x| x * x).collect();
 
-    for i in square{
+    for i in square {
         sum += i;
     }
 
     return sum;
-
 }
 
-pub fn evens_only ( nums : &[i32]) -> Vec<i32>{
+pub fn evens_only(nums: &[i32]) -> Vec<i32> {
+    let mut even: Vec<i32> = vec![];
 
-    let mut even : Vec<i32> = vec![];
-
-    for i in nums{
-
-        if i % 2 == 0{
+    for i in nums {
+        if i % 2 == 0 {
             even.push(*i);
         }
-
     }
 
     return even;
-
 }
 
 pub struct Countdown {
-    n : i32
+    n: i32,
 }
-
 
 impl Countdown {
     fn new(n: i32) -> Self {

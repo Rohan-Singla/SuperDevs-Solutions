@@ -1,12 +1,12 @@
 use core::f32;
-use std::{f64::consts::PI};
+use std::{f64::consts::PI, fmt, ops::Add};
 
+mod centralized_exchange;
 mod week_1;
 mod week_2;
-mod centralized_exchange;
 
 fn main() {
-    
+
     // let result = sum_to(5);
     // let result = transform("2");
 
@@ -32,9 +32,6 @@ fn main() {
 
     // println!("{:?}",result);
 
-
-
-
     // let mylist = List::Cons(1, Box::new(
     //     List::Cons(2, Box::new(
     //         List::Cons(3, Box::new(
@@ -47,13 +44,9 @@ fn main() {
     // let result = list_sum(&mylist);
     // println!("{}", result);
 
-
     // let result = count_owners(5);
 
     // println!("{}",result);
-
-
-
-
 }
 
+// tuple struct

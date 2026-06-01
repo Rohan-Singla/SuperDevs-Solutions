@@ -2,14 +2,10 @@ use std::collections::HashMap;
 
 enum Side {
     Buy,
-    Sell
+    Sell,
 }
 
-fn build_book(
-    orders: Vec<(u64, u64)>,
-    side: Side,
-) -> (Vec<(u64, u64)>, Option<u64>) {
-
+fn build_book(orders: Vec<(u64, u64)>, side: Side) -> (Vec<(u64, u64)>, Option<u64>) {
     let mut levels: HashMap<u64, u64> = HashMap::new();
 
     for (price, qty) in orders {
@@ -38,8 +34,6 @@ fn book_snapshot(
     ask_levels: &[(u64, u64)],
     depth: usize,
 ) -> (Vec<(u64, u64)>, Vec<(u64, u64)>, u64) {
-
-    
     let top_bids: Vec<(u64, u64)> = bid_levels.iter().take(depth).copied().collect();
     let top_asks: Vec<(u64, u64)> = ask_levels.iter().take(depth).copied().collect();
 

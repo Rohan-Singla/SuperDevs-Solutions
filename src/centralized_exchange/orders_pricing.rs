@@ -1,8 +1,7 @@
-
 enum Status {
     REJECTED,
     IMMEDIATE,
-    RESTING
+    RESTING,
 }
 
 pub struct Order<'a> {
@@ -15,7 +14,6 @@ pub struct Order<'a> {
 }
 
 pub fn process_incoming_orders(order: Order) -> &'static str {
-
     if order.order_type != "MARKET" && order.order_type != "LIMIT" {
         return "REJECTED";
     }
@@ -40,24 +38,29 @@ pub fn process_incoming_orders(order: Order) -> &'static str {
     }
 
     "RESTING"
-
-
 }
 
-
-fn order_economics(best_bid: u64, best_ask: u64, price: u64, qty: u64, fee_bps: u64) -> (u64, u64, u64, u64) {
-    let spread   = best_ask - best_bid;
+fn order_economics(
+    best_bid: u64,
+    best_ask: u64,
+    price: u64,
+    qty: u64,
+    fee_bps: u64,
+) -> (u64, u64, u64, u64) {
+    let spread = best_ask - best_bid;
     let midprice = (best_bid + best_ask) / 2;
     let notional = price * qty;
-    let fee      = notional * fee_bps / 10000;
+    let fee = notional * fee_bps / 10000;
 
-    return (spread, midprice, notional, fee)
+    return (spread, midprice, notional, fee);
 }
 
 fn sort_buy_orders(orders: &[(u64, u64)]) -> Vec<usize> {
     let mut indices: Vec<usize> = (0..orders.len()).collect();
     indices.sort_by(|&a, &b| {
-        orders[b].0.cmp(&orders[a].0)
+        orders[b]
+            .0
+            .cmp(&orders[a].0)
             .then(orders[a].1.cmp(&orders[b].1))
     });
     indices
@@ -66,8 +69,10 @@ fn sort_buy_orders(orders: &[(u64, u64)]) -> Vec<usize> {
 fn sort_sell_orders(orders: &[(u64, u64)]) -> Vec<usize> {
     let mut indices: Vec<usize> = (0..orders.len()).collect();
     indices.sort_by(|&a, &b| {
-        orders[a].0.cmp(&orders[b].0)
+        orders[a]
+            .0
+            .cmp(&orders[b].0)
             .then(orders[a].1.cmp(&orders[b].1))
     });
     indices
-}  
+}

@@ -1,9 +1,7 @@
-pub mod hello_rust;
 pub mod captstones;
-
+pub mod hello_rust;
 
 pub mod closures_iterators;
-
 
 pub mod collections;
 

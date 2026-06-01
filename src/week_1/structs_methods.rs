@@ -1,6 +1,6 @@
 struct Rectangle {
-    width : i32,
-    height : i32
+    width: i32,
+    height: i32,
 }
 
 // impl Rectangle {
@@ -18,20 +18,22 @@ struct Rectangle {
 // }
 
 impl Rectangle {
-    fn square(size : i32) -> Self {
-        Self {width : size , height : size}
+    fn square(size: i32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
     }
 
-    fn area(&self) -> i32{
-        return {&self.width * &self.height}
+    fn area(&self) -> i32 {
+        return { &self.width * &self.height };
     }
 }
 
-pub fn rect_area(w : i32 , h : i32) -> i32{
+pub fn rect_area(w: i32, h: i32) -> i32 {
     let rect = Rectangle {
-        
-        width: w , height : h
-    
+        width: w,
+        height: h,
     };
 
     // let area = rect.area();
@@ -39,4 +41,3 @@ pub fn rect_area(w : i32 , h : i32) -> i32{
 
     return rect.width * rect.height;
 }
-
