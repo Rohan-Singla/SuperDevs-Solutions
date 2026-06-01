@@ -52,13 +52,18 @@ impl Summary for Words {
     }
 }
 
-
-pub struct Vec2 { pub x: f64, pub y: f64 }
+pub struct Vec2 {
+    pub x: f64,
+    pub y: f64,
+}
 
 impl Add for Vec2 {
     type Output = Vec2;
     fn add(self, rhs: Vec2) -> Vec2 {
-        Vec2 { x: self.x + rhs.x, y: self.y + rhs.y }
+        Vec2 {
+            x: self.x + rhs.x,
+            y: self.y + rhs.y,
+        }
     }
 }
 
