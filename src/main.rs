@@ -4,6 +4,7 @@ use std::{collections::HashMap, f64::consts::PI, fmt::{self, format}, ops::Add, 
 mod centralized_exchange;
 mod week_1;
 mod week_2;
+mod solana_validator;
 
 fn main() {
 
@@ -47,6 +48,23 @@ fn main() {
     // let result = count_owners(5);
 
     // println!("{}",result);
+
+    // fn hash_chain(start_hex: &str, iterations: u32) -> String {
+    //     let mut hash = hex_to_bytes(start_hex);
+    //     for _ in 0..iterations {
+    //         hash = sha256(&hash).to_vec();
+    //     }
+    //     hex(&hash)
+    // }
+
+    // fn verify_chain(start_hex: &str, claimed_end_hex: &str, iterations: u32) -> bool {
+    //     let mut hash = hex_to_bytes(start_hex);
+    //     for _ in 0..iterations {
+    //         hash = sha256(&hash).to_vec();
+    //     }
+    //     hex(&hash) == claimed_end_hex
+    // }
+    
 }
 
 // tuple struct
