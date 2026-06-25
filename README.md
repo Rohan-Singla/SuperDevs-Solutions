@@ -1,13 +1,13 @@
-# Superdevs Week 1 Assignment Solutions
+# Superdevs Assignment Solutions
 
-I have solved all the problems for the Week 1 assignment from Superdevs / Solana Fellowship 2026.
+This repo includes some of my weekly assignments solutions from Superdevs / Solana Fellowship 2026.
 
 # Note 
 
-this was for my personal learning it helped me learn a lot about rust fundamentals ...
+this was for my personal learning it helped me learn a lot about rust and solana  ...
 
 Assignment Link:  
-https://context.100xdevs.com/learn/track/cmm2xvq5f002p40g5jcj3kslj
+https://context.100xdevs.com/
 
 All problems are solved module-wise and organized into separate files as per module name .
 
